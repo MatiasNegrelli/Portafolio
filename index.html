@@ -1,14 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="./src/output.css" rel="stylesheet">
+    <title>Portfolio de Matias Negrelli</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script defer>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
 </head>
-<body>
-    <h1 class=" text-red-700">
-        Hello world!
-    </h1>
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto p-8">
+        <!-- Main Content -->
+        <div class="flex flex-col lg:flex-row">
+            <!-- Sidebar -->
+            <div class="w-full lg:w-1/4 bg-gray-800 p-6 rounded-lg mb-8 lg:mb-0 lg:mr-8">
+                <div class="flex items-center mb-6">
+                    <img src="./img/WhatsApp Image 2024-02-01 at 6.10.41 PM.jpeg" alt="Avatar" class="h-32 w-32 rounded-full mr-4">
+                    <div>
+                        <h1 class="text-3xl font-bold">Matias Negrelli</h1>
+                        <p class="text-xl text-gray-400">Developer</p>
+                    </div>
+                </div>
+                <div class="mb-8">
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Email: <a href="mailto:matiasnegrelli2004@gmail.com" class="text-blue-400">matiasnegrelli2004@gmail.com</a></li>
+                        <li>Teléfono: <a href="tel:+543517726608" class="text-blue-400">+54 (351) 772-6608</a></li>
+                        <li>Fecha de Nac: <span class="text-blue-400">Marzo 25, 2004</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-3/4">
+                <!-- Navigation -->
+                <nav class="bg-gray-800 p-4 rounded-lg mb-8">
+                    <div class="flex justify-between items-center lg:hidden">
+                        <h2 class="text-yellow-400">Menu</h2>
+                        <button onclick="toggleMenu()" class="text-yellow-400 focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <ul id="mobile-menu" class="hidden lg:flex lg:justify-around lg:text-yellow-400 mt-4 lg:mt-0">
+                        <li class="w-full lg:w-auto"><a href="./Pages/aboutMe.html">About me</a></li>
+                        <li class="w-full lg:w-auto text-blue-700"><a href="#resume">Studies</a></li>
+                        <li class="w-full lg:w-auto"><a href="#contact">Portafolio</a></li>
+                        <li class="w-full lg:w-auto"><a href="#contact">Certificates</a></li>
+                        <li class="w-full lg:w-auto"><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Resume Section -->
+                <section id="resume" class="bg-gray-800 p-6 rounded-lg">
+                    <div>
+                        <h3 class="text-xl font-semibold">Education</h3>
+                        <ul class="mt-4 space-y-4">
+                            <li class="bg-gray-700 p-4 rounded-lg">
+                                <h4 class="font-semibold">Universidad Tecnologica
+                                    nacional (Cordoba Capital)
+                                </h4>
+                                <p class="text-gray-400"> Marzo 2022 - Actualidad ( Cursando 3er
+                                    año de la carrera de Ingenieria en Sistemas de Informacion)</p>
+                                </p>
+                            </li>
+                            <li class="bg-gray-700 p-4 rounded-lg">
+                                <h4 class="font-semibold">Colegio Corazon de Maria</h4>
+                                <p class="text-gray-400">Mar. 2015 - Dec. 2021
+                                </p>
+                                <p>Bachillerato orientado en economia y
+                                    administracion</p>
+                            </li>
+                            <li class="bg-gray-700 p-4 rounded-lg">
+                                <h4 class="font-semibold">CoderHouse (Cordoba Capital)</h4>
+                                <p class="text-gray-400">Ene. 2023 - May. 2023</p>
+                                <p>Desarrollo Web</p>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </section>
+                <section id="skills" class="bg-gray-800 p-6 rounded-lg mt-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Skills</h3>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                            <div class="bg-gray-700 p-4 rounded-lg flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 452 520" width="24" height="24">
+                                    <path fill="#e34f26" d="M41 460L0 0h451l-41 460-185 52" />
+                                    <path fill="#ef652a" d="M226 472l149-41 35-394H226" />
+                                    <path fill="#ecedee" d="M226 208h-75l-5-58h80V94H84l15 171h127zm0 147l-64-17-4-45h-56l7 89 117 32z"/>
+                                    <path fill="#fff" d="M226 265h69l-7 73-62 17v59l115-32 16-174H226zm0-171v56h136l5-56z"/>
+                                </svg>
+                                <p class="text-gray-400">HTML</p>
+                            </div>
+                            <div class="bg-gray-700 p-4 rounded-lg flex items-center">
+                                <svg class="w-6 h-6 text-yellow-500 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M...Z" /> <!-- Replace with appropriate SVG path for CSS icon -->
+                                </svg>
+                                <p class="text-gray-400">CSS</p>
+                            </div>
+                            <div class="bg-gray-700 p-4 rounded-lg flex items-center">
+                                <svg class="w-6 h-6 text-yellow-400 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M...Z" /> <!-- Replace with appropriate SVG path for JavaScript icon -->
+                                </svg>
+                                <p class="text-gray-400">JavaScript</p>
+                            </div>
+                            <div class="bg-gray-700 p-4 rounded-lg flex items-center">
+                                <svg class="w-6 h-6 text-blue-300 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M...Z" /> <!-- Replace with appropriate SVG path for React icon -->
+                                </svg>
+                                <p class="text-gray-400">React</p>
+                            </div>
+                            <div class="bg-gray-700 p-4 rounded-lg flex items-center">
+                                <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M...Z" /> <!-- Replace with appropriate SVG path for Node.js icon -->
+                                </svg>
+                                <p class="text-gray-400">Node.js</p>
+                            </div>
+                            <div class="bg-gray-700 p-4 rounded-lg flex items-center">
+                                <svg class="w-6 h-6 text-green-400 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M...Z" /> <!-- Replace with appropriate SVG path for Express icon -->
+                                </svg>
+                                <p class="text-gray-400">Express</p>
+                            </div>
+                            <div class="bg-gray-700 p-4 rounded-lg flex items-center">
+                                <svg class="w-6 h-6 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M...Z" /> <!-- Replace with appropriate SVG path for SQL icon -->
+                                </svg>
+                                <p class="text-gray-400">SQL</p>
+                            </div>
+                            <div class="bg-gray-700 p-4 rounded-lg flex items-center">
+                                <svg class="w-6 h-6 text-red-400 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M...Z" /> <!-- Replace with appropriate SVG path for Git icon -->
+                                </svg>
+                                <p class="text-gray-400">Git</p>
+                            </div>
+                            <div class="bg-gray-700 p-4 rounded-lg flex items-center">
+                                <svg class="w-6 h-6 text-black mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M...Z" /> <!-- Replace with appropriate SVG path for GitHub icon -->
+                                </svg>
+                                <p class="text-gray-400">GitHub</p>
+                            </div>
+                            <div class="bg-gray-700 p-4 rounded-lg flex items-center">
+                                <svg class="w-6 h-6 text-yellow-600 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M...Z" /> <!-- Replace with appropriate SVG path for Scrum icon -->
+                                </svg>
+                                <p class="text-gray-400">Scrum</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </div>
+    </div>
 </body>
 </html>
