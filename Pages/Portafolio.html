@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Matias Negrelli</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            padding-top: 70%; 
+        }
+
+        .iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 142.857%;
+            height: 142.857%; 
+            border: 0;
+            transform: scale(0.7); 
+            transform-origin: top left;
+        }
+    </style>
+    <script defer>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto p-8">
+        <!-- Main Content -->
+        <div class="flex flex-col lg:flex-row">
+            <!-- Sidebar -->
+            <div class="w-full lg:w-1/4 bg-gray-800 p-6 rounded-lg mb-8 lg:mb-0 lg:mr-8">
+                <div class="flex items-center mb-6">
+                    <img src="../img/WhatsApp Image 2024-02-01 at 6.10.41 PM.jpeg" alt="Avatar" class="h-32 w-32 rounded-full mr-4">
+                    <div>
+                        <h1 class="text-3xl font-bold">Matias Negrelli</h1>
+                        <p class="text-xl text-gray-400">Developer</p>
+                    </div>
+                </div>
+                <div class="mb-8">
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Email: <a href="mailto:matiasnegrelli2004@gmail.com" class="text-blue-400">matiasnegrelli2004@gmail.com</a></li>
+                        <li>Teléfono: <a href="tel:+543517726608" class="text-blue-400">+54 (351) 772-6608</a></li>
+                        <li>Fecha de Nac: <span class="text-blue-400">Marzo 25, 2004</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-3/4">
+                <!-- Navigation -->
+                <nav class="bg-gray-800 p-4 rounded-lg mb-8">
+                    <div class="flex justify-between items-center lg:hidden">
+                        <h2 class="text-yellow-400">Menu</h2>
+                        <button onclick="toggleMenu()" class="text-yellow-400 focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <ul id="mobile-menu" class="hidden lg:flex lg:justify-around lg:text-yellow-400 mt-4 lg:mt-0">
+                        <li class="w-full lg:w-auto"><a href="./aboutMe.html">About Me</a></li>
+                        <li class="w-full lg:w-auto"><a href="../index.html">Studies</a></li>
+                        <li class="w-full lg:w-auto text-blue-700"><a href="./Portafolio.html">Portafolio</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Portfolio Section -->
+                <section id="portfolio" class="bg-gray-800 p-6 rounded-lg">
+                    <h2 class="text-2xl font-bold mb-4">Portafolio</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="bg-gray-700 p-4 rounded-lg">
+                            <div class="iframe-container">
+                                <iframe src="https://nails-roxyy.vercel.app/" class="iframe" loading="lazy"></iframe>
+                            </div>
+                            <h3 class="text-lg font-semibold mt-4">Nails Roxxy</h3>
+                            <p class="text-gray-400 text-sm">Landing Page de un Local de Uñas</p>
+                            <a href="https://nails-roxyy.vercel.app/" target="_blank" class="bg-yellow-400 text-gray-800 px-3 py-1 rounded-lg mt-2 inline-block">Ver Proyecto</a>
+                        </div>
+                        <div class="bg-gray-700 p-4 rounded-lg">
+                            <div class="iframe-container">
+                                <iframe src="../project2/index.html" class="iframe" loading="lazy"></iframe>
+                            </div>
+                            <h3 class="text-lg font-semibold mt-4">Proyecto 2</h3>
+                            <p class="text-gray-400 text-sm">Descripción breve del proyecto 2.</p>
+                            <a href="../project2/index.html" target="_blank" class="bg-yellow-400 text-gray-800 px-3 py-1 rounded-lg mt-2 inline-block">Ver Proyecto</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
